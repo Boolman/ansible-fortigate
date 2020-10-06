@@ -12,7 +12,7 @@
     - vdom
     fortios_system_vdom:
       vdom:  "root"
-      state: "present"
+      state: "{{ state | default('present') }}"
       system_vdom:
         name: "{{ vdom }}"
         short_name: "{{ vdom }}"
