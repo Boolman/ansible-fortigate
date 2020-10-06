@@ -11,7 +11,7 @@
     tags:
     - vdom
     fortios_system_vdom:
-      vdom:  "{{ vdom }}"
+      vdom:  "root"
       state: "present"
       system_vdom:
         name: "{{ vdom }}"
