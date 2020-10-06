@@ -12,7 +12,7 @@
     - vdom
     fortios_system_vdom:
       vdom:  "root"
-      state: "{{ state | default('present') }}"
+      state: "{{ state | regex_replace('<nil>', 'present') }}"
       system_vdom:
         name: "{{ vdom }}"
         short_name: "{{ vdom }}"
